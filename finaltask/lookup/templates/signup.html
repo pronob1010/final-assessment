@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<form id="login" method="POST" class="tab-pane active">
+    {% csrf_token %}
+        <h4 class="font-weight-700">PERSONAL INFORMATION</h4>
+        <p class="font-weight-600">If you have an account with us, please log in.</p>
+        {{form|crispy}}
+        <div class="text-left">
+            <button class="site-button button-lg outline outline-2"> CREATE </button>
+        </div>
+    </form>
+    {% endblock %}

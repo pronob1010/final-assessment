@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load crispy_forms_tags %}
+<form id="login" method="POST" class="tab-pane active col-12 p-a0 ">
+    {% csrf_token %}
+    
+    <h4 class="font-weight-700">LOGIN</h4>
+    <p class="font-weight-600">If you have an account with us, please log in.</p>
+    
+
+    {{form|crispy}}
+    <div class="text-left">
+        <button class="site-button m-r5 button-lg">login</button>
+        <a data-toggle="tab" href="#forgot-password" class="m-l5"><i class="fa fa-unlock-alt"></i> Forgot Password</a> 
+    </div>
+</form>
+{% endblock %}
